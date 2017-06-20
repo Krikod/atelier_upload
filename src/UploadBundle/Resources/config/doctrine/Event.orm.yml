@@ -1,7 +1,7 @@
-UploadBundle\Entity\Article:
+UploadBundle\Entity\Event:
     type: entity
     table: null
-    repositoryClass: UploadBundle\Repository\ArticleRepository
+    repositoryClass: UploadBundle\Repository\EventRepository
     id:
         id:
             type: integer
@@ -9,18 +9,16 @@ UploadBundle\Entity\Article:
             generator:
                 strategy: AUTO
     fields:
+        start:
+            type: datetime
+        end:
+            type: datetime
         title:
             type: string
             length: 255
-        content:
-            type: string
-            length: 255
-        date:
-            type: datetime
 
     oneToOne:
-        picture:
+        pdf:
             targetEntity: UploadBundle\Entity\Picture
             cascade: ['all']
-
     lifecycleCallbacks: {  }

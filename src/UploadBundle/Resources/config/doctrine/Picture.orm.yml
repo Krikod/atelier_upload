@@ -15,4 +15,16 @@ UploadBundle\Entity\Picture:
         alt:
             type: string
             length: 255
-    lifecycleCallbacks: {  }
+
+    lifecycleCallbacks:
+        # For create
+        prePersist: [ preUpload ]
+        postPersist: [ upload ]
+
+        # For edit
+        preUpdate: [ preUpload ]
+        postUpdate: [ upload ]
+
+        # For remove
+        postRemove: [ remove ]
+

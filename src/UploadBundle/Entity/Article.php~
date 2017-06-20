@@ -32,11 +32,6 @@ class Article
      */
     private $content;
 
-    /**
-     * @var string
-     */
-    private $date;
-
 
     /**
      * Get id
@@ -96,29 +91,6 @@ class Article
         return $this->content;
     }
 
-    /**
-     * Set date
-     *
-     * @param string $date
-     *
-     * @return Article
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return string
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
     /**
      * @var \UploadBundle\Entity\Picture
      */
